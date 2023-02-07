@@ -19,6 +19,9 @@ module.exports = {
         normal: "#FC7C23",
       },
     },
+    fontFamily: {
+      ubuntu: ["Ubuntu", "sans-serif"],
+    },
     backgroundImage: {
       flying:
         "linear-gradient(360deg, rgba(255,255,255,1) 0%, rgba(200,198,198,1) 12%, rgba(0,99,255,1) 100%)",
