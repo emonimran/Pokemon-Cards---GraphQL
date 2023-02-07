@@ -2,6 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -12,9 +13,8 @@ function PokemonCards({ pokemonDetails, isSmallScreen }) {
       {!isSmallScreen ? (
         <div className="grid md:grid-cols-5 sm:grid-cols-4 xs:grid-cols-3 gap-8 md:mx-20 mx-8 mt-10">
           {Object.values(pokemonDetails).map((pokemon) => (
-            <>
+            <Link href={`/pokemons/${pokemon.name}`} key={pokemon.id}>
               <div
-                key={pokemon.id}
                 className={`text-black hover:text-white hover:bg-blue transition duration-300 rounded-lg ${styles.pokemon_card} w-[230px] h-[300px]`}
               >
                 <div className="relative">
@@ -66,7 +66,7 @@ function PokemonCards({ pokemonDetails, isSmallScreen }) {
                   </div>
                 </div>
               </div>
-            </>
+            </Link>
           ))}
         </div>
       ) : (
@@ -79,7 +79,7 @@ function PokemonCards({ pokemonDetails, isSmallScreen }) {
             className="h-80 mx-4"
           >
             {Object.values(pokemonDetails).map((pokemon) => (
-              <>
+              <Link href={`/pokemons/${pokemon.name}`} key={pokemon.id}>
                 <SwiperSlide>
                   <div
                     key={pokemon.id}
@@ -135,7 +135,7 @@ function PokemonCards({ pokemonDetails, isSmallScreen }) {
                     </div>
                   </div>
                 </SwiperSlide>
-              </>
+              </Link>
             ))}
           </Swiper>
         </div>

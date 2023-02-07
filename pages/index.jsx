@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <>
       <main>
-        <PokemonContainer></PokemonContainer>
-        <PokemonBlog></PokemonBlog>
+        <PokemonContainer />
+        <PokemonBlog />
       </main>
     </>
   );

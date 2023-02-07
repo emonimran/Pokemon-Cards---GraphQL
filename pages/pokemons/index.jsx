@@ -40,7 +40,7 @@ const gqlVariables = {
   offset: 9,
 };
 
-export default function Pokemons() {
+export default function PokemonsDefault() {
   const [pokemonNames, setPokemonNames] = useState([]);
   const [pokemonDetails, setPokemonDetails] = useState({});
 
